@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# 진희도
+## 2023-03-16(3주차)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 오늘의 강의 내용 
+### 초코레이티 페키지 매니지먼트, node.js install, npm install
+### 리액트 개념 정리 복잡한 사이트를 쉽게 빠르게 만들고, 관리하기 위해 만들어진 것이 바로 리액트 개념 ! <br><br>
+# 리액트의 장점 
+1. 빠른 업데이트와 렌더링 속도 이것을 가능하게 하는 것이 바로 Virtual DOM입니다. 
+2. DOM(Document Object Model)이란 XML, HTML문서의 각 항목을 계층으로 표현하여<br> 생성, 변형, 삭제할 수 있도록 돕는 인터페이스입니다. 이것은 W3C 표준입니다. 
+3. Virtual DOM은 DOM 조작이 비효율적인 이유로 속도가 느리기 때문에 고안된 방법입니다.
+4. DOM은 동기식, Virtual DOM은 비동기식 방법으로 렌더링 합니다.
 
-## Available Scripts
+## 컴포넌트 기반 구조 
+1. 리액트의 모든 페이지는 컴포넌트로 구성됩니다.
+2. 하나의 컴포넌트는 다른 여러 개의 컴포넌트의 조합으로 구성할 수 있습니다.
+3. 그래서 리액트로 개발을 하다보면 레고 블럭을 조립나는 것 처럼 컴포넌트를 조합해서 웹사이트를 개발하게 됩니다.
+4. 아래 그림은 에어비앤비 사이트 화면의 컴포넌트 구조입니다. 재사용성이 뛰어납니다.<br><br>
 
-In the project directory, you can run:
+## 재사용성
+1. 반복적인 작업을 줄여주기 때문에 생산성을 높여줍니다.
+2. 또한 유지보수가 용이합니다.
+3. 재사용이 가능 하려면 해당 모듈의 의존성이 없어야 합니다.
 
-### `npm start`
+## 든든한 지원군
+* 메타(구 페이스북)에서 오픈소스 프로젝트로 관리하고 있어 계속 발전하고 있습니다
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 활발한 지식 공유 & 커뮤니티
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 모바일 앱 개발 가능
+* 리액트 네이티브라는 모바일 환경 UI프레임워크를 사용하면 크로스플랫폼 모바일앱을 개발할 수 있습니다.
+<hr>
 
-### `npm test`
+# 리액트의 단점
+<hr>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 방대한 학습량
+* 자바스크립트를 공부한 경우 빠르게 학습할 수 있습니다.
 
-### `npm run build`
+## 높은 상태 관리 복잡도
+* state, component life cycle 등의 개념이 있지만 그리 어렵지 않습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 작성코드 : 
+### vscode 터미널에서 "npm install npx -g" -> "npx -v" -> "npx create-react-app my app" -> y -> "cd my-app" -> "npm start"
+### npx생성및 react-app 생성 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 커밋 완료및 복습 완료 오늘 수업 끝 
+<br><br>
+<hr>
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 2023/03/23 4주차
