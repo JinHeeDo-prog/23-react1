@@ -49,3 +49,42 @@
 <hr>
 
 # 2023/03/23 4주차
+
+## JSX란?
+1. JSX는 자바스크립트의 확장 문법이다. <br>
+2. JSX는 HTML과 비슷한 문법을 가지고 있다. <br>
+## const element = <a href ="https://www.reactjs.org">link</a>; 
+* 중괄호를 사용하여 어트리뷰트에 자바스크립트 표현식을 삽입할 수도 있음
+
+## Babel은 JSX를 React.createElement() 호출로 컴파일한다.
+
+# JSX의 역활
+1. JSX는 내부적으로 XML/THML코드를 자바스크립트로 변환합니다
+2. React가 createElement함수를 삳용하여 자동으로 자바스크립트로 변환합니다.
+3. 만일 JS작업할경우 직접 createElement함수를 사용해야 합니다.
+4. 앞으로 설명하는 코드를 보면 알 수 있지만 결국 JSX는 가독성을 높여주는 역할을 합니다.
+
+# JSX의 장점
+1. 코드가 간결해 집니다.
+2. 가독성이 향상 됩니다.
+3. Injection Attacc이라 불리는 해킹 방법을 방어함으로써 보안에 강합니다.
+
+
+# JSX사용법
+1. 모든 자바스크립트 문법을 지원합니다.
+2. 자바스크립트 문법에 XMl과 HTML을 섞어서 사용합니다.
+3. 아래 코드의 2번 라인처럼 섞어서 사용합니다.
+4. 만일 html이나 xml에 자바스크립트 코드를 사용하고 싶으면 {}괄호를 사용합니다.
+```javascript
+const name = '소플';<br>
+const element = <h1>안녕, {name}</h1>;<br>
+
+ReactDom.render(<br>
+    element,<br>
+    document.getElementById('root');<br>
+)
+```
+5. 만일 태그의 속성값을 넣고 싶으면 다음과 같이 사용합니다.
+
+
+
