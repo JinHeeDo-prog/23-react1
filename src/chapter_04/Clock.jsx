@@ -1,0 +1,11 @@
+import React from "react";
+
+function Clock(prorps){
+  return (
+    <div>
+      <h1>안녕, 리액트</h1>
+      <h2>현재시간 : {new Date().toLocaleDateString()}</h2>
+    </div>
+  )
+}
+export default Clock;
