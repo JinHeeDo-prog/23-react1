@@ -10,12 +10,12 @@ import reportWebVitals from './reportWebVitals';
 //import CommentList from './chapter_05/CommentList';
 import NotificationList from './chapter_06/NotificationList';
 import Accomodate from './chapter_07/Accomodate';
-
+import FruitList from './midterm/FruitList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NotificationList/>
+    <FruitList/>
   </React.StrictMode>
 );
 
