@@ -11,11 +11,12 @@ import reportWebVitals from './reportWebVitals';
 import NotificationList from './chapter_06/NotificationList';
 import Accomodate from './chapter_07/Accomodate';
 import FruitList from './midterm/FruitList';
-
+import ConfirmButton from './chapter_08/ConfirmButton';
+import LandingPage from './chapter_09/LandingPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FruitList/>
+    <LandingPage  />
   </React.StrictMode>
 );
 
