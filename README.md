@@ -1,6 +1,144 @@
 # 진희도
-# 2023/05/04 10주차 수업
+# 2023/05/11 11주차 수업
 
+```javascript
+function BoilingVerdict(props){
+    if(props.celsius >=100){
+        return<p>물이 끓습니다</p>;
+    }
+    return <p>물이 끓지 않습니다.</p>;
+}
+```
+
+```javascript
+function Calculator(props){
+    const[temperature,setTemperature]=useState('');
+    const handleChange =(event)=>{
+        setTemperature(event.target.value);
+    }
+    return(
+        <fieldset>
+        <legend>섭씨 온도를 입력하세요:</legend>
+        <input
+        value={temperature}
+        onChange={handleChange}/>
+        <BoilingVerdict
+        celsius={parseFloat(temperature)}/>
+        </fieldset>
+    )
+}
+
+const scaleNames={
+    c:'섭씨',
+    f:'화씨'
+};
+function TemperatureInput(props){
+     const[temperature,setTemperature]=useState('');
+    const handleChange =(event)=>{
+        setTemperature(event.target.value);
+    
+}
+return(
+    <fieldset>
+    <legend>온도를 입력해주세요(단위:{scaleNames[props.scale]}):</legend>
+    <input value={temperature}onChange={handleChange}/>
+    </fieldset>
+    )
+}
+
+
+function Calculator(props){
+    return(
+        <div>
+        <TemperatureInput scale="c"/>
+        <TemperatureInput scale="f"/>
+        </div>
+    )
+}
+
+
+function toCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5 / 9;
+}
+
+function toFahrenheit(celcius) {
+  return (celsius * 9 / 5) + 32;
+}
+```
+```javascript
+tryConvert('abc', toCelsius); // 'empty string 을 리턴'
+tryConvert('10.22', toFahrenheit); // '50.396을 리턴'
+``` 
+
+
+```javascript
+function tryConvert(temperature,convert){
+    const input=parseFloat(temperature);
+    if(Number.isNaN(input)){
+        return'';
+    }
+    const output =convert(input);
+    const rounded=Math.round(output*1000)/1000;
+    return rounded.toString();
+    
+}
+
+const handleChange = (event) => {
+  // 변경 전: setTemperature(event.target.value);
+  props.onTemperatureChange(event.target.value);
+}
+return(
+    // 변경 전:<input value={temperature} onChange={handleChange}/>
+    <input value={props.temperature}onChange={handleChange}/>
+)
+```
+
+
+## 최종본
+```javascript
+function Calculator(props){
+    const [temperature,setTemperature]=useState('');
+    const [scale,setScale]=useState('c');
+
+    const handleCelsiusChange=(temperature)=>{
+        setScale('c');
+        setTemperature(temperature);
+    }
+
+    const handleFahrenheitChange=(temperature)=>{
+        setScale('f');
+        setTemperature(temperature);
+    }
+
+    const celsius=scale==='f'?tryConvert(temperature,toCelsius):temperature;
+    const fahrenheit=scale==='c'?tryConvert(temperature,toFahrenheit):temperature;
+
+    return(
+        <div>
+        <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={handleCelsiusChange}/>
+        <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={handleFahrenheitChange}/>
+        <BoilingVerdict celcius={parseFloat(celcius)}/>
+        </div>
+    )
+}
+```
+```javascript
+function TemperatureInput(props){
+    const handelChange=(event)=>{
+        props.onTemperatureChange(event.target.value);
+    }
+
+    return(
+      <fieldset>
+        <legend>온도를 입력해 주세요(단위:{scaleNames[props.scale]}):</legend>
+
+        <input value={props.temperature} onChange={handleChange} />
+      </fieldset>
+    )
+  }
+```
+
+# 2023/05/04 10주차 수업
 # chapter.10 리스트와 키
 ## 10.1 리스트와 키란 무엇인가
 * 리스트는 자바스크립트의 변수나 객체를 하나의 변수로 묶어 놓은 배열과 같다
